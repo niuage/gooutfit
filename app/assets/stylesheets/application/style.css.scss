@@ -1,82 +1,124 @@
-* {
-  padding: 0;
-  margin: 0;
+@include font-face(dekar, '/fonts/dekar/DekarLight', normal, normal);
+@include font-face(dekar, '/fonts/dekar/Dekar', bold, normal);
+
+body {
+  background: #dfdfdf;
 }
 
-.row {
-  @include clearfix;
+#content-wrapper {
+  position: relative;
+  width: $wrapper-width;
+  margin: 0 auto;
+  @include box-shadow(0 0 8px rgba(0, 0, 0, 0.3));
 }
-
-.right { float: right; }
-.left { float: left; }
 
 .content {
-  margin: 0 auto;
-  width: 980px;
+  @include clearfix;
   position: relative;
+  padding: 0 $site-margins;
+  background: white;
+  &.dark {
+    background: black;
+  }
 }
 
-.box {
-  padding: $lh;
+.fixed {
+  .content {
+    margin: 0 auto;
+    width: $wrapper-width - 2 * $site-margins;
+  }
 }
 
-#header {
-  padding: 20px;
-  background: #eae9e4;
-  border-bottom: 1px solid $border-color;
+#main-nav {
+  .content {
+    background: black;
+  }
 
-  nav {
-    height: 42px;
-    background: #3b383b;
-    @include border-radius(4px);
+  li {
+    float: left;
 
-    li {
-      float: left;
-    }
-
-    a {
-      display: block;
-      line-height: 42px;
+    &.current a {
       color: white;
-      padding: 0 $lh;
+      background: black;
     }
 
-    .logo {
+    &.logo {
       a {
-        font-weight: bold;
-        font-size: 16px;
+        padding-right: 50px;
+        font-size: 18px;
         letter-spacing: 1px;
-        background: #484547;
-        @include border-radius(4px 0 0 4px);
       }
     }
   }
 
-  .intro {
-    padding: 24px $lh 18px;
+  a {
+    border-right: 1px solid #222;
+    font-weight: bold;
+    padding: 0 12px;
+    color: $faded-white;
+    display: block;
+    line-height: 48px;
+    font-size: 14px;
   }
 
-  h2 {
-    font-size: 30px;
+  .right {
+    a {
+      border-left: 1px solid #222;
+      border-right: 0;
+    }
+  }
+}
+
+#header {
+  font-family: $dekar;
+}
+
+#intro {
+  padding: 136px 0;
+
+  h1 {
+    font-size: 87px;
+    color: white;
+    text-align: center;
     font-weight: normal;
   }
 
-  p.slogan {
-    padding: $lh / 2 0 $lh + 6px;
-    font-size: 18px;
-    color: $text-light;
+  h2 {
+    text-align: center;
+    font-size: 42px;
+    a {
+      color: $faded-white;
+      margin-right: 20px;
+    }
   }
 }
 
-#girls {
-  background: image-url("girls.png") no-repeat;
-  width: 244px;
-  height: 279px;
-  position: absolute;
-  bottom: -38px;
-  right: 200px;
+.with-ico {
+  display: inline-block;
+  padding-left: 50px;
+  position: relative;
 }
 
-#content {
-  padding: $lh 0;
+.ico {
+  height: 50px;
+  width: 50px;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  background: image-url("icons.png") 0 0 no-repeat;
+}
+
+#intro h2 a.snap-ico {
+  margin-right: 30px;
+}
+
+.share-ico {
+  .ico {
+    background-position: -50px 0;
+  }
+  padding-left: 60px;
+}
+.decide-ico .ico {
+  background-position: -100px 0;
 }

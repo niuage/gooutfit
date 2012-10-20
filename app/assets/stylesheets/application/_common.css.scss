@@ -1,6 +1,9 @@
 $lh: 18px;
 $grid: 100px;
 $gutter: 10px;
+$site-margins: 40px;
+
+$dekar: "dekar", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 $col-number: 12;
 
@@ -16,10 +19,15 @@ $text-light: #808285;
 $primary-color: #3db396;
 $secondary-color: #fe6159;
 
+$faded-white: #999;
+
 $light-bg: #f1f1ec;
 
 $border-color: #dad9d6;
 $dark-border-color: darken($border-color, 3%);
+
+$content-width: 980px;
+$wrapper-width: $content-width + 2 * $site-margins;
 
 @mixin clearfix {
   &:before, &:after { content: ""; display: table; }

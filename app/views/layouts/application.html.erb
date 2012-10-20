@@ -8,42 +8,45 @@
 </head>
 <body>
 
-  <header id="header">
-
-    <nav class="content">
-      <ul class="left" id="main-menu">
-        <li class="logo"><%= link_to "GoOutfit", root_url %></li>
-        <li><%= link_to "Outfits", root_url %></li>
-        <li><%= link_to "Community", root_url %></li>
-        <li><%= link_to "Shop", root_url %></li>
-      </ul>
-      <ul class="right" id="user-menu">
-        <li><%= link_to "Melanie", root_url %></li>
-      </ul>
+  <div id="content-wrapper">
+    <nav id="main-nav" class="fixed">
+      <div class="content">
+        <ul class="left" id="main-menu">
+          <li class="logo"><%= link_to "GoOutfit", root_url %></li>
+          <li class="current"><%= link_to "Outfits", root_url %></li>
+          <li><%= link_to "Community", root_url %></li>
+          <li><%= link_to "Shop", root_url %></li>
+        </ul>
+        <ul class="right" id="user-menu">
+          <li><%= link_to "Melanie", root_url %></li>
+        </ul>
+      </div>
     </nav>
 
-    <div class="content">
+    <header id="header" class="content dark">
 
-      <div class="box intro">
-        <h2>Snap, share, decide!</h2>
-        <p class="slogan">Share pictures of your outfits, and let your friends<br>help you decide!</p>
-
-      <%= link_to "Share outfits now!", "", class: "button" %>
+      <div id="intro">
+        <h1>GoOutfit</h1>
+        <h2>
+          <%= link_to "", class: "snap-ico with-ico" do %>
+            <span class='ico'></span>Snap
+          <% end %>
+          <%= link_to "", class: "share-ico with-ico" do %>
+            <span class='ico'></span>Share
+          <% end %>
+          <%= link_to "", class: "decide-ico with-ico" do %>
+            <span class='ico'></span>Decide
+          <% end %>
+        </h2>
       </div>
 
-      <div id="girls"></div>
+    </header>
 
+    <div class="content">
+      <%= yield %>
     </div>
 
-  </header>
-
-  <section class="content" id="content">
-
-    <%= yield %>
-
-  </section>
-
-
+  </div>
 
 </body>
 </html>
