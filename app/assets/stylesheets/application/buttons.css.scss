@@ -1,0 +1,11 @@
+.button {
+  @include border-radius(2px);
+  background: $primary-color;
+  color: white;
+  padding: $lh / 2 $lh;
+  font-size: 14px;
+}
+
+a.button {
+  display: inline-block;
+}

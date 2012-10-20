@@ -8,7 +8,42 @@
 </head>
 <body>
 
-<%= yield %>
+  <header id="header">
+
+    <nav class="content">
+      <ul class="left" id="main-menu">
+        <li class="logo"><%= link_to "GoOutfit", root_url %></li>
+        <li><%= link_to "Outfits", root_url %></li>
+        <li><%= link_to "Community", root_url %></li>
+        <li><%= link_to "Shop", root_url %></li>
+      </ul>
+      <ul class="right" id="user-menu">
+        <li><%= link_to "Melanie", root_url %></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+
+      <div class="box intro">
+        <h2>Snap, share, decide!</h2>
+        <p class="slogan">Share pictures of your outfits, and let your friends<br>help you decide!</p>
+
+      <%= link_to "Share outfits now!", "", class: "button" %>
+      </div>
+
+      <div id="girls"></div>
+
+    </div>
+
+  </header>
+
+  <section class="content" id="content">
+
+    <%= yield %>
+
+  </section>
+
+
 
 </body>
 </html>

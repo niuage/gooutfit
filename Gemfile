@@ -36,6 +36,8 @@ gem 'doorkeeper', git: "git://github.com/petergoldstein/doorkeeper.git", branch:
 gem "cancan",               git: "git://github.com/ryanb/cancan.git"
 gem 'simple_form'
 
+gem 'bourbon'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

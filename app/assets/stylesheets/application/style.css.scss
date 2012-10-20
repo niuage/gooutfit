@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.row {
+  @include clearfix;
+}
+
+.right { float: right; }
+.left { float: left; }
+
+.content {
+  margin: 0 auto;
+  width: 980px;
+  position: relative;
+}
+
+.box {
+  padding: $lh;
+}
+
+#header {
+  padding: 20px;
+  background: #eae9e4;
+  border-bottom: 1px solid $border-color;
+
+  nav {
+    height: 42px;
+    background: #3b383b;
+    @include border-radius(4px);
+
+    li {
+      float: left;
+    }
+
+    a {
+      display: block;
+      line-height: 42px;
+      color: white;
+      padding: 0 $lh;
+    }
+
+    .logo {
+      a {
+        font-weight: bold;
+        font-size: 16px;
+        letter-spacing: 1px;
+        background: #484547;
+        @include border-radius(4px 0 0 4px);
+      }
+    }
+  }
+
+  .intro {
+    padding: 24px $lh 18px;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: normal;
+  }
+
+  p.slogan {
+    padding: $lh / 2 0 $lh + 6px;
+    font-size: 18px;
+    color: $text-light;
+  }
+}
+
+#girls {
+  background: image-url("girls.png") no-repeat;
+  width: 244px;
+  height: 279px;
+  position: absolute;
+  bottom: -38px;
+  right: 200px;
+}
+
+#content {
+  padding: $lh 0;
+}

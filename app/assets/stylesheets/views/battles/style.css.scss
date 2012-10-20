@@ -1,0 +1,81 @@
+.battle {
+  border: 3px solid $light-bg;
+  margin: -3px;
+  margin-bottom: $lh;
+
+  .wrapper {
+    border: 1px solid $dark-border-color;
+    margin: -1px;
+  }
+
+  header {
+    background: $light-bg;
+    p {
+      color: $text-light;
+    }
+    padding-bottom: 40px;
+  }
+
+  h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+    em {
+      color: $secondary-color;
+      font-style: normal;
+    }
+  }
+
+  .battle-outfit,
+  .battle-center,
+  .clothes,
+  .image {
+    float: left;
+  }
+
+  .battle-center {
+    width: $grid;
+
+    .vs {
+      border: 1px solid $border-color;
+      height: $grid;
+      margin-top: $gutter;
+      text-align: center;
+      line-height: $grid;
+      font-weight: bold;
+      font-size: 24px;
+      color: $text-light;
+    }
+  }
+
+  .battle-outfit {
+    padding: 10px;
+  }
+
+  .image {
+    border: 3px solid white;
+    overflow: hidden;
+    position: relative;
+    top: -30px;
+
+    img {
+      margin: -3px;
+      overflow: hidden;
+      display: block;
+    }
+  }
+
+  .cloth {
+    border: 1px solid $border-color;
+    height: $grid - 10;
+    width: $grid - 10;
+    margin-bottom: $gutter;
+  }
+
+  .left .clothes {
+    margin-right: $gutter - 2;
+  }
+  .right .clothes {
+    margin-left: $gutter - 2;
+  }
+
+}

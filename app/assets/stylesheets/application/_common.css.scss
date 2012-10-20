@@ -1,0 +1,28 @@
+$lh: 18px;
+$grid: 100px;
+$gutter: 10px;
+
+$col-number: 12;
+
+$a: #21558C;
+$a-hover: #29978a;
+
+@mixin col($number, $padding: 0) {
+  width: ($number * $grid + ($number - 1) * $gutter) - $padding;
+}
+
+$text-light: #808285;
+
+$primary-color: #3db396;
+$secondary-color: #fe6159;
+
+$light-bg: #f1f1ec;
+
+$border-color: #dad9d6;
+$dark-border-color: darken($border-color, 3%);
+
+@mixin clearfix {
+  &:before, &:after { content: ""; display: table; }
+  &:after { clear: both; }
+  zoom: 1;
+}
