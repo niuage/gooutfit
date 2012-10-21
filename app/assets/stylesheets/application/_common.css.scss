@@ -3,6 +3,9 @@ $grid: 100px;
 $gutter: 10px;
 $site-margins: 40px;
 
+$gw-column: 100px;          // Column Width
+$gw-gutter: 10px;           // Gutter Width
+
 $dekar: "dekar", "Helvetica Neue", "Helvetica", Arial, sans-serif;
 
 $col-number: 12;
@@ -15,6 +18,9 @@ $a-hover: #29978a;
 }
 
 $text-light: #808285;
+
+$button-color: #cacaca;
+$button-color-hover: #bbb;
 
 $primary-color: #3db396;
 $secondary-color: #fe6159;

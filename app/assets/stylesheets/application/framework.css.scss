@@ -16,3 +16,32 @@
   left: 0;
   z-index: 2000;
 }
+
+.border-bottom {
+  border-bottom: 1px solid black;
+}
+
+.col {
+  float: left;
+  margin-right: $gutter;
+
+  &.last { margin-right: 0; }
+}
+
+@for $i from 1 through $col-number {
+  .col#{$i} {
+    width: grid-width($i);
+  }
+}
+
+.content.grey {
+  background: #f8f8f8;
+}
+
+.meta {
+  color: #777;
+}
+
+.relative {
+  position: relative;
+}

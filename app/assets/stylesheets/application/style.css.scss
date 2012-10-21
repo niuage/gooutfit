@@ -2,14 +2,14 @@
 @include font-face(dekar, '/fonts/dekar/Dekar', bold, normal);
 
 body {
-  background: #dfdfdf;
+  background: #d4d4d4 image-url("body-bg.png") 0 0 repeat-x fixed;
 }
 
 #content-wrapper {
   position: relative;
   width: $wrapper-width;
   margin: 0 auto;
-  @include box-shadow(0 0 8px rgba(0, 0, 0, 0.3));
+  @include box-shadow(0 0 12px rgba(0, 0, 0, 0.3));
 }
 
 .content {
@@ -31,6 +31,7 @@ body {
 
 #main-nav {
   .content {
+    opacity: 0.9;
     background: black;
   }
 
@@ -52,32 +53,38 @@ body {
   }
 
   a {
-    border-right: 1px solid #222;
+//    border-right: 1px solid #222;
     font-weight: bold;
     padding: 0 12px;
     color: $faded-white;
     display: block;
     line-height: 48px;
     font-size: 14px;
+
+    &:hover {
+      color: white;
+    }
   }
 
   .right {
     a {
-      border-left: 1px solid #222;
-      border-right: 0;
+//      border-left: 1px solid #222;
+//      border-right: 0;
     }
   }
 }
 
 #header {
   font-family: $dekar;
+  background: black image-url("iphone.png") 50% 100% no-repeat;
 }
 
 #intro {
-  padding: 136px 0;
+  padding: 100px 0 380px;
 
   h1 {
     font-size: 87px;
+    padding-bottom: 30px;
     color: white;
     text-align: center;
     font-weight: normal;
@@ -86,10 +93,22 @@ body {
   h2 {
     text-align: center;
     font-size: 42px;
+    padding-bottom: 12px;
+
     a {
-      color: $faded-white;
+      color: white;
       margin-right: 20px;
+
+      &:hover {
+        color: white;
+      }
     }
+  }
+
+  p {
+    text-align: center;
+    font-size: 24px;
+    color: darken($faded-white, 25%);
   }
 }
 
@@ -121,4 +140,53 @@ body {
 }
 .decide-ico .ico {
   background-position: -100px 0;
+}
+
+.love-ico .ico {
+  background-position: 0 -100px;
+}
+
+.author {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.data {
+  .section {
+    border-top: 1px solid #ccc;
+    padding-top: $gutter;
+    margin-bottom: $lh;
+    &.first {
+      border-top: 3px solid #52a776;
+    }
+  }
+}
+
+.items {
+  padding: $gutter 0;
+  border-bottom: 1px solid #ccc;
+
+  a {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    height: 45px;
+    width: 45px;
+    display: block;
+    text-indent: -9999px;
+    padding: 0;
+    &.last { margin: 0; }
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  .dress {
+    background-image: image-url("dress.png");
+  }
+  .pants {
+    background-image: image-url("pants.png");
+  }
+  .sweat {
+    background-image: image-url("sweat.png");
+  }
 }

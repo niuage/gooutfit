@@ -1,0 +1,12 @@
+.seach-form {
+  input {
+    border: 0;
+    line-height: 36px;
+    height: 36px;
+    font-size: 24px;
+    padding: 10px 40px;
+    background: image-url("icons.png") -50px -50px no-repeat;
+    outline: none;
+    width: grid-width(8);
+  }
+}

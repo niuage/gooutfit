@@ -9,7 +9,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 body { margin: 0; font-size: 13px; line-height: 1.231; }
-body, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; }
+body, button, input, select, textarea { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #222; }
 
 //::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 //::selection { background: #fe57a1; color: #fff; text-shadow: none; }
@@ -59,3 +59,7 @@ input:invalid, textarea:invalid { background-color: #f0dddd; }
 
 table { border-collapse: collapse; border-spacing: 0; }
 td { vertical-align: top; }
+
+p {
+  line-height: 18px;
+}

@@ -1,0 +1,17 @@
+.battle {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #bbb;
+
+  &:hover {
+    background: white;
+  }
+
+  header {
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-size: 42px;
+  }
+}
