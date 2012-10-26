@@ -10,6 +10,9 @@ gem 'mysql2'
 gem 'json'
 gem 'unicorn'
 
+gem 'heroku'
+gem 'pg'
+
 gem 'rabl'
 gem 'yajl-ruby',            :require => "yajl"
 

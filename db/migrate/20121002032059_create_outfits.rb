@@ -4,6 +4,8 @@ class CreateOutfits < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.references :user
+      t.string :photo
+      t.string :remote_photo_url
 
       t.timestamps
     end

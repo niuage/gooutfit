@@ -1,0 +1,1 @@
+ActiveAsync.mode = Rails.env.test? ? :fake_resque : :resque

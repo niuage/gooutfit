@@ -1,0 +1,9 @@
+<%= render layout: layout_path("header") do %>
+  <h1><%= @outfit.name %> / by <%= @outfit.user.login %></h1>
+<% end %>
+
+<div class="content">
+  <header>
+    <h2><%= @outfit.name %></h2>
+  </header>
+</div>

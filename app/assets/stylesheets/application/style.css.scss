@@ -1,21 +1,25 @@
-@include font-face(dekar, '/fonts/dekar/DekarLight', normal, normal);
-@include font-face(dekar, '/fonts/dekar/Dekar', bold, normal);
+@include font-face(dekar, '/assets/dekar/DekarLight', normal, normal);
+@include font-face(dekar, '/assets/dekar/Dekar', bold, normal);
 
 body {
-  background: #d4d4d4 image-url("body-bg.png") 0 0 repeat-x fixed;
+  background: #d4d4d4;
+//   image-url("body-bg.png") 0 0 repeat-x fixed
 }
 
 #content-wrapper {
+  background: black;
   position: relative;
   width: $wrapper-width;
   margin: 0 auto;
+  padding-top: 42px;
   @include box-shadow(0 0 12px rgba(0, 0, 0, 0.3));
 }
 
 .content {
   @include clearfix;
   position: relative;
-  padding: 0 $site-margins;
+  padding: 0 $site-white-margins;
+  margin: 0 $site-black-margins;
   background: white;
   &.dark {
     background: black;
@@ -31,8 +35,7 @@ body {
 
 #main-nav {
   .content {
-    opacity: 0.9;
-    background: black;
+    background: #222;
   }
 
   li {
@@ -45,49 +48,56 @@ body {
 
     &.logo {
       a {
+        font-weight: normal;
+        color: white;
         padding-right: 50px;
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: 1px;
       }
     }
   }
 
   a {
-//    border-right: 1px solid #222;
     font-weight: bold;
     padding: 0 12px;
     color: $faded-white;
     display: block;
-    line-height: 48px;
+    line-height: 42px;
     font-size: 14px;
 
     &:hover {
       color: white;
     }
-  }
 
-  .right {
-    a {
-//      border-left: 1px solid #222;
-//      border-right: 0;
+    &.button {
+      @include border-radius(0);
+      padding: 0 16px;
+      color: white;
+      background: #3B5998;
+      &:hover { background: #4B67A1; }
     }
   }
 }
 
 #header {
   font-family: $dekar;
-  background: black image-url("iphone.png") 50% 100% no-repeat;
+  background: black;
+
+  h1 {
+    font-size: 60px;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+  }
 }
 
 #intro {
-  padding: 100px 0 380px;
+  background: image-url("iphone.png") 50% 100% no-repeat;
+  padding: 66px 0 380px;
 
   h1 {
     font-size: 87px;
-    padding-bottom: 30px;
-    color: white;
-    text-align: center;
-    font-weight: normal;
+    padding: 0 0 30px;
   }
 
   h2 {
@@ -96,7 +106,7 @@ body {
     padding-bottom: 12px;
 
     a {
-      color: white;
+      color: #ddd;
       margin-right: 20px;
 
       &:hover {
@@ -108,7 +118,13 @@ body {
   p {
     text-align: center;
     font-size: 24px;
-    color: darken($faded-white, 25%);
+    color: darken($faded-white, 20%);
+    font-weight: bold;
+
+    em {
+      font-style: normal;
+      color: darken($faded-white, 10%);
+    }
   }
 }
 
@@ -132,14 +148,16 @@ body {
   margin-right: 30px;
 }
 
+.snap-ico {
+  .ico { background-position: 0 -2px; }
+}
+
 .share-ico {
-  .ico {
-    background-position: -50px 0;
-  }
+  .ico { background-position: -50px 0; }
   padding-left: 60px;
 }
 .decide-ico .ico {
-  background-position: -100px 0;
+  background-position: -100px -2px;
 }
 
 .love-ico .ico {
@@ -157,7 +175,8 @@ body {
     padding-top: $gutter;
     margin-bottom: $lh;
     &.first {
-      border-top: 3px solid #52a776;
+      margin-bottom: $lh + 6px;
+      border-top: 6px solid #52a776;
     }
   }
 }
@@ -188,5 +207,58 @@ body {
   }
   .sweat {
     background-image: image-url("sweat.png");
+  }
+}
+
+.me {
+  img {
+    @include border-radius(1px);
+    height: 18px;
+    width: 18px;
+    margin-right: 5px;
+  }
+  span {
+    vertical-align: top;
+  }
+}
+
+.pic-wrapper {
+  background: #ccc;
+  min-height: 168px;
+  position: relative;
+
+  a, h3 {
+    color: white;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .75);
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    @extend .small-section;
+  }
+
+  .controls-wrapper {
+    width: 100%;
+    height: 168px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: none;
+    background: image-url("overlay.png") 0 0 repeat-x;
+  }
+
+  &:hover {
+    .controls-wrapper {
+      display: block;
+    }
+  }
+
+  .controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }

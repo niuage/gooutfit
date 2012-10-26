@@ -1,0 +1,14 @@
+.outfits {
+  padding: $site-white-margins 0;
+}
+
+.outfit {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  border-bottom: 5px solid black;
+
+  h2 {
+    font-size: 24px;
+    padding: 6px 0;
+  }
+}

@@ -1,0 +1,5 @@
+<%= render "outfits/image", outfit: outfit %>
+
+<h2><%= link_to outfit.name, outfit %></h2>
+<p class="author">Shot by <%= outfit.user.login %></p>
+<p class="description"><%= outfit.description %></p>

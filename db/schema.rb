@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121002033037) do
+ActiveRecord::Schema.define(:version => 20121021144033) do
+
+  create_table "authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "uid"
+    t.string   "provider"
+    t.string   "oauth_token"
+    t.string   "oauth_secret"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "battle_outfits", :force => true do |t|
     t.integer  "battle_id"
@@ -32,8 +42,10 @@ ActiveRecord::Schema.define(:version => 20121002033037) do
     t.string   "name"
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.string   "photo"
+    t.string   "remote_photo_url"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
   end
 
   create_table "users", :force => true do |t|
@@ -41,6 +53,8 @@ ActiveRecord::Schema.define(:version => 20121002033037) do
     t.string   "url"
     t.string   "description"
     t.string   "role",                   :default => "unverified"
+    t.string   "avatar"
+    t.string   "remote_avatar_url"
     t.string   "email",                  :default => "",           :null => false
     t.string   "encrypted_password",     :default => "",           :null => false
     t.string   "reset_password_token"

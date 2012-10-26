@@ -1,0 +1,26 @@
+<% javascript "jquery.masonry", "masonry" %>
+
+<% content_for :dom_ready do %>
+  App.Masonry.setup({
+    masonryOptions: {
+      columnWidth: 320,
+      gutterWidth: 10
+    }
+  });
+<% end %>
+
+<%= layout :header do %>
+  <h1>Outfits / all</h1>
+<% end %>
+
+<%= render "outfits/search_form" %>
+
+<div class="content">
+  <section class="outfits" data-masonry="true">
+    <% @outfits.each_with_index do |outfit, i| %>
+      <div class="col col3 outfit <%= "last" if (i + 1) % 3 == 0 %>">
+        <%= render "outfits/list_item", outfit: outfit %>
+      </div>
+    <% end %>
+  </section>
+</div>

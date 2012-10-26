@@ -8,6 +8,9 @@
 .box {
   padding: $lh;
 }
+.s-box {
+  padding: $gutter;
+}
 
 .fixed {
   position: fixed;
@@ -44,4 +47,9 @@
 
 .relative {
   position: relative;
+}
+
+.small-section {
+  padding-bottom: 6px;
+  margin-bottom: 6px;
 }

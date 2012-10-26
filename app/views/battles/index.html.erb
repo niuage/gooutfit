@@ -1,15 +1,11 @@
+<%= render "home/header" %>
 <%= render "outfits/search_form" %>
-
-
 
 <% 4.times do |i| %>
 <article class="content grey battle">
-
-
-
   <div class="col col3 data">
     <div class="first section">
-      <h2>Classy night out</h2>
+      <h2>Casual night out</h2>
     </div>
     <div class="section">
       <p class="author">Shot by Melanie</p>
@@ -23,7 +19,9 @@
     </div>
     <div class="col col6 relative last">
       <div class="col col3">
-        <%= image_tag "outfit#{i + 1}.png" %>
+
+        <%= render "outfits/image", outfit: nil %>
+
         <div class="items row">
           <%= link_to "akaka", "", class: "button inset pants" %>
           <%= link_to "akaka", "", class: "button inset sweat" %>
@@ -31,7 +29,17 @@
         </div>
       </div>
       <div class="col col3 last">
-        <%= image_tag "outfit#{i + 2}.png" %>
+        <div class="pic-wrapper">
+          <%= image_tag "outfit#{i + 2}.png" %>
+          <div class="controls-wrapper">
+            <div class="controls">
+              <div class="s-box">
+                <h3>Red and grey outfit</h3>
+                <%= link_to "Love it!" %>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="items row">
           <%= link_to "akaka", "", class: "button inset pants" %>
           <%= link_to "akaka", "", class: "button inset dress" %>

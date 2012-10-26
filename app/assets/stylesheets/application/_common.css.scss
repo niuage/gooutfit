@@ -2,6 +2,8 @@ $lh: 18px;
 $grid: 100px;
 $gutter: 10px;
 $site-margins: 40px;
+$site-black-margins: 6px;
+$site-white-margins: $site-margins - $site-black-margins;
 
 $gw-column: 100px;          // Column Width
 $gw-gutter: 10px;           // Gutter Width

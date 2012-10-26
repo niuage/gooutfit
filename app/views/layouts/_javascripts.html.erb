@@ -1,0 +1,11 @@
+<%= javascript_include_tag "application" %>
+<%= yield :javascripts %>
+
+<script type="text/javascript" charset="utf-8">
+  // <![CDATA[
+  ;
+  $(function () {
+    <%= yield :dom_ready %>
+  });
+  // ]]>
+</script>

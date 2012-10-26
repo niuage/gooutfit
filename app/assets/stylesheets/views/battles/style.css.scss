@@ -1,7 +1,7 @@
 .battle {
-  padding-top: 40px;
-  padding-bottom: 40px;
-  border-bottom: 1px solid #bbb;
+  padding-top: $site-white-margins;
+  padding-bottom: $site-white-margins;
+  margin-bottom: 2px;
 
   &:hover {
     background: white;
@@ -12,6 +12,6 @@
   }
 
   h2 {
-    font-size: 42px;
+    font-size: 36px;
   }
 }

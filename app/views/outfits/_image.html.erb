@@ -1,0 +1,13 @@
+<%
+  image = outfit ? outfit.photo.iphone.url : "outfit#{rand(5) + 1}.png"
+  name = outfit ? outfit.name : "Red and grey outfit"
+ %>
+
+<%= layout :image_with_controls do %>
+  <%= image_tag image %>
+
+  <%= layout :controls do %>
+    <h3><%= name %></h3>
+    <%= link_to "Love it!" %>
+  <% end %>
+<% end %>
